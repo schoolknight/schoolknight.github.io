@@ -1,0 +1,25 @@
+---
+layout: post
+title: 高颜值的代码仓库-KeeWeb
+date: '2016-08-07 04:07'
+---
+
+互联网渗入我们每个人生活的各个方面，每个人现在都有许多个网站账号，各个账户之间的隔离安全性就显得非常的重要。如果所有的账户都采取一样的密码，很容易某些安全性不好的网站被脱库，导致多个账户沦陷。反过来讲，要是各个账户都用不同的密码，又记不住，容易遗忘，这时候密码仓库的重要性就出来了。
+
+像1Password这样的应用就是解决这样的需求，但是1Password是收费的。同时，这样的私有应用如何能够保证本身“不作恶”和安全性，不泄露存储的云端密码，也是个重要问题。所以我就把主要的搜索目光转向开源项目上，特别是作为端工具，不做云端的开源工具上。我找到的比较好的解决方案是**[KeePass](http://keepass.info/)**
+
+## KeePass
+>KeePass is a free open source password manager, which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key file. So you only have to remember one single master password or select the key file to unlock the whole database. The databases are encrypted using the best and most secure encryption algorithms currently known (AES and Twofish). For more information, see the features page.
+
+上面一段是**KeePass**官方网站上的介绍，基本意思就是**KeePass**是个开源的密码管理软件，能够通过一个主密码来本地加密其他的密码文件。**KeePass**有适应各个平台+Portable的版本，除了支持本地文件外，还支持WebDAV、OneDrive等第三方云端存储模式。真正打动我的是支持WebDav，这样我就能把密码文件存在自己的服务器上了，感觉更加安全。**KeePass**主要的缺点就是两个字：太丑！幸亏还有很多第三方版本，经过试验，功能和“颜值”都比较不错的是**[KeeWeb](https://keeweb.info/)**。
+
+## KeeWeb
+![KeeWebPic](assets/img/scr1.png)
+基本和官方的**KeePass**的功能是一致的，但是！！！！漂亮太多！！！！
+但是并没有十全十美的事情的，我在使用的过程中也是碰到了坑的。
+- 在实验室的机器上搭WebDav，结果实验室停电，卒。。。。
+- 尝试使用OneDrive，**KeeWeb**好像支持的有问题，log里面表示连不上，卒。。。。
+
+经过各种实验，决定采取**同步盘+KeeWeb**的方式来组建自己的密码管理系统，因为**KeeWeb**能对密码文件进行本地加密，所以放在第三方网盘上也可以接受。国内并没有太好的同步盘选择，许多网盘都不支持同步盘，百度云很奇怪的只有Mac版本有同步盘，而且听说不靠谱。还听说坚果云支持WebDav，但是坚果云的主页各种反应慢，而且感觉很山寨，所以把密码放在上面不放心（主页做好是多么重要）。最后我选择了国外的网盘MEGA，理由如下：
+- 支持同步盘，而且宣传上说端对端传输+内容加密
+- Dropbox连不上。。。虽然MEGA也慢，但是本身密码文件不大，也是可以接受的
