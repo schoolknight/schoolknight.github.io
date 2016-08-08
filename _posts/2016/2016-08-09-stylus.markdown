@@ -10,14 +10,17 @@ date: "2016-08-09 00:27"
 
 ## 安装Stylus
 
-直接中npm安装
+直接npm安装
+
 ```
 npm install -g stylus nib
 ```
+
 nib貌似是一个拓展包，其中包含些函数。
 
 ## 配置Express
 也比较简单，我的配置如下（app.js）
+
 ```javascript
 var stylus = require('stylus');
 var nib = require('nib');
@@ -40,6 +43,7 @@ app.use(stylus.middleware({
 }));
 
 ```
+
 最开始我怎么都没有办法编译，也查不出为什么，直到我把Stylus的代码移动到下面代码之前
 
 ```javascript
@@ -82,6 +86,7 @@ if(app.get('env') == 'production') {
 }
 
 ```
+
 迷一样的Bug，可能是在Express中下面某句的代码有冲突之类的（有可能是Router）
 
 还有待继续研究。
