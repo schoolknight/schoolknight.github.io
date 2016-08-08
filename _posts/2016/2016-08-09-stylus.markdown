@@ -21,7 +21,7 @@ nib貌似是一个拓展包，其中包含些函数。
 ## 配置Express
 也比较简单，我的配置如下（app.js）
 
-```javascript
+{% highlight javascript %}
 var stylus = require('stylus');
 var nib = require('nib');
 function compile(str,path){
@@ -41,12 +41,11 @@ app.use(stylus.middleware({
 	force:true,
 	compile: compile
 }));
-
-```
+{% highlight javascript %}
 
 最开始我怎么都没有办法编译，也查不出为什么，直到我把Stylus的代码移动到下面代码之前
 
-```javascript
+{% highlight javascript %}
 
 // avoid 304
 app.disable('etag');
@@ -84,8 +83,7 @@ if(app.get('env') == 'production') {
 
 	});
 }
-
-```
+{% highlight javascript %}
 
 迷一样的Bug，可能是在Express中下面某句的代码有冲突之类的（有可能是Router）
 
