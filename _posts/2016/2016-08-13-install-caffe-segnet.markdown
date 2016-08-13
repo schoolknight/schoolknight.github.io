@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "install caffe-segnet"
+title: "安装 caffe-segnet"
 date: "2016-08-13 20:06"
 ---
 
