@@ -41,7 +41,7 @@ app.use(stylus.middleware({
 	force:true,
 	compile: compile
 }));
-{% highlight javascript %}
+{% endhighlight %}
 
 最开始我怎么都没有办法编译，也查不出为什么，直到我把Stylus的代码移动到下面代码之前
 
@@ -83,7 +83,7 @@ if(app.get('env') == 'production') {
 
 	});
 }
-{% highlight javascript %}
+{% endhighlight %}
 
 迷一样的Bug，可能是在Express中下面某句的代码有冲突之类的（有可能是Router）
 
